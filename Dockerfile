@@ -8,7 +8,7 @@ RUN ln -sf /bin/true /sbin/initctl
 # Let the conatiner know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
 
-ADD ./source.list /etc/apt/sources.list
+# ADD ./source.list /etc/apt/sources.list
 
 RUN apt-get update
 RUN apt-get -y upgrade
@@ -44,13 +44,12 @@ RUN /usr/bin/easy_install supervisor-stdout
 ADD ./supervisord.conf /etc/supervisord.conf
 
 # Install Wordpress
-ADD http://hk43.server.idc.wiki/music.tar.gz /usr/share/nginx/music.tar.gz
+ADD http://music.imjs.work/music.tar.gz /usr/share/nginx/music.tar.gz
 RUN cd /usr/share/nginx/ && tar xvf music.tar.gz && rm music.tar.gz
 RUN mv /usr/share/nginx/html/5* /usr/share/nginx/domains/music.imjs.work/public_html
 RUN rm -rf /usr/share/nginx/www
 RUN mv /usr/share/nginx/domains/music.imjs.work/public_html /usr/share/nginx/www
 ADD ./tz.php /usr/share/nginx/www/tz.php
-RUN chown -R www-data:www-data /usr/share/nginx/www
 
 # Wordpress Initialization and Startup Script
 ADD ./start.sh /start.sh

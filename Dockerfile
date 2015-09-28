@@ -8,6 +8,8 @@ RUN ln -sf /bin/true /sbin/initctl
 # Let the conatiner know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
 
+ADD ./source.list /etc/apt/sources.list
+
 RUN apt-get update
 RUN apt-get -y upgrade
 

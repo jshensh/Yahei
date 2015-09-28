@@ -1,0 +1,10 @@
+deb http://debian.ustc.edu.cn/ubuntu/ natty main restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ natty-backports restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ natty-proposed main restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ natty-security main restricted universe multiverse
+deb http://debian.ustc.edu.cn/ubuntu/ natty-updates main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ natty main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ natty-backports main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ natty-proposed main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ natty-security main restricted universe multiverse
+deb-src http://debian.ustc.edu.cn/ubuntu/ natty-updates main restricted universe multiverse

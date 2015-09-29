@@ -34,9 +34,6 @@ ADD supervisord.conf /etc/
 
 # Add the file
 ADD tz.php /var/www/index.php
-ADD http://jshensh.11.7cloud.net/music.tar.gz /var/www/music.tar.gz
-RUN cd /var/www && tar -zxvf music.tar.gz && rm -rf music.tar.gz && mv ./domains/music.imjs.work/public_html/* .
-RUN rm -rf domains
 
 # Set the port to 80 
 EXPOSE 80
